@@ -1,0 +1,215 @@
+# Github问题集（一）
+## github 是什么：  
+GitHub 是一个面向开源及私有软件项目的托管平台。 （因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。）
+
+## git是什么：  
+开源的分布式版本控制系统，用于敏捷高效地处理任何大小的项目。
+
+## github的优势： 
+支持多人共同完成一个项目，因此团队可以在同一页面对话交流。
+
+## github上可以有个人账号 还可以有（ ）账号： 
+还可以有 组织账号
+
+## github上面的两个组成要素是什么： 
+个人或组织的主页、一些项目和仓库
+
+## github上两个重要页面： 
+www.GitHub.com主页（数字仪表板）、个人界面
+
+## 主页菜单都包含什么： 
+overview、repositories、stars、followers、following
+
+## 仓库的心跳线代表什么：
+代表仓库里 项目的活跃程度
+
+## star的作用是：
+收藏别人的项目,方便以后查找。
+
+## fork的作用是：
+对有兴趣参加或必须参加的项目，必须fork这个项目，才有权限更改这个项目。 （分叉、克隆 出一个（仓库的）新拷贝。）
+
+## watch的作用是： 
+就类似于QQ说说留言，自己留一条言，别人再留言时，自己也会收到提醒。
+
+## 搜索结果分别有哪些类别：
+repositoties（仓库）、code（代码）、commits（提交）、lssues（问题）、wikis（维基）、Users（用户）
+
+
+
+# Github问题集（二）
+## 个人主页上的“+”下拉菜单可创建的四种类别分别有？分别的意思？
+  New repository（新的储存库）、Import repository（导入库）、New gist（新的要点）、New organization（新的组织）
+
+## 如何能将仓库中的html文件直接解析成页面？
+  新建一个gh-pages（gh页面）分支，然后就可以在 yourname.github.com/repo（回购） 地址查看gh-pages的页面了。
+
+## 如何删除仓库
+  repositories（仓库）  ->  setting（设置）  ->  delete
+
+## Bash是什么操作系统的命令
+  Linux 操作系统
+
+## Pwd是什么命令
+  查看”当前工作目录“的完整路径。
+
+## Cd是什么命令  
+  转跳到本地目录
+
+## Echo是什么命令
+  在浏览器中显示
+
+## 配置git用户名的命令
+  $ git config [--global] user.name "Your Name"
+
+## 配置邮箱的命令
+  $ git config [--global] user.email "you@example.com"
+
+## 命令行换行方式
+  \
+
+## 命令行终结方式
+  Ctrl+C
+
+## 使用命令行比GUI方式有何优势
+  速度更快，兼容性和适应性更好，开发更容易
+
+## 提交到本地仓库时为什么有暂存区
+  为了方便修改、增加、删除
+
+## 新建代码仓库的命令
+  github-create() 
+  {if [ $1 ]
+  then
+      repo_name=$1
+  else
+      repo_name=`basename $(pwd)`
+      echo "set Repo name to ${repo_name}"
+  fi 
+  curl -u 'username:api_token' https://api.github.com/user/repos -d '{"name":"'$repo_name'"}'
+  git remote add origin git@github.com:username/$repo_name.git
+  }
+  
+## 将本地代码仓库push到github远程代码仓库
+　  (1)首先将本地仓库和远程代码仓库进行关联：
+　   $git remote add origin your_repo_url.git
+　  (2)然后将本地代码仓库push到github：
+　    $git push -u origin master
+
+## git clone [url] 这个命令的作用是
+    将项目从Github或者服务器上克隆下来
+
+## 添加指定文件到暂存区的命令
+    $git add
+
+## 删除工作区文件，并且将这次删除放入暂存区的命令
+    $git rm
+
+## 改名文件，并且将这个改名文件放入暂存区的命令
+   $ git mv
+
+## 提交暂存区到仓库的命令
+   $ git commit-m[message]
+
+## 直接从工作区提交到仓库的命令
+    $git commit-a-m
+
+## 显示变更信息的命令
+    $git status
+
+## 查看历史信息的命令
+    git log--stat
+
+
+
+
+
+# Markdown问题整理
+## 1、MarkDown 是什么： 
+Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
+
+## 2、MarkDown 的特点： 
+轻量、简单、通用。
+
+##  MarkDown 的优点：  
+简单标记符完成排版，所写即所见，让你专注于文字而不是排版
+                    纯文本，所以兼容性极强，可以用所有文本编辑器打开
+                    格式转换方便，Markdown文本可以轻松转换为 html、pdf等
+                    Markdown 的标记语法有极好的可读性  
+
+## 3、MarkDown 的用途： 
+①写博客，世界上最流行的博客平台WordPress和大型CMS如Joomla、Drupal都能很好的支持Markdown。
+                    ②用于编写说明文档，并且以“README.MD”的文件名保存在软件的目录下面。
+                    ③由于我们有了RStudio这样的神级编辑器，我们还可以快速将Markdown转化为演讲PPT、Word产品文档、LaTex论文甚至是用非常少量的代码完成最小可用原型。
+
+## 4、MarkDown 的编辑工具有哪些：
+**OSX**
+                                Atom
+                                Byword
+                                Mou
+                                Typora
+                                MacDown
+                                RStudio  
+                            **Linux**
+                                Atom
+                                ReText
+                                UberWriter
+                                RStudio  
+                            **Windows**
+                                Atom
+                                MarkdownPad
+                                Miu
+                                Typora
+                                RStudio  
+                            **iOS**
+                                Byword  
+                            **浏览器插件**
+                                MaDo (Chrome)
+                                Marxico（Chrome）  
+                            **高级应用**
+                                Sublime Text 2 + MarkdownEditing 
+
+## 5、MarkDown 的区块元素和区段元素分别包含哪些：
+        区块元素： 1、段落和换行
+                  2、标题
+                  3、区块的引用
+                  4、列表
+                  5、代码区块
+                  6、分隔线
+        区段元素： 1、链接
+                  2、强调
+                  3、行内标记
+                  4、插入图片
+
+
+## 文本样式
+  （带“*”星号的文本样式，在原版Markdown标准中不存在，但在其大部分衍生标准中被添加）  
+    链接 :[Title](URL)  
+    加粗 :**Bold**  
+    斜体字 :*Italics*  
+    *删除线 :~~text~~  
+    *高亮 :==text==  
+    段落 : 段落之间空一行  
+    换行符 : 一行结束时输入两个空格  
+    列表 :* 添加星号成为一个新的列表项。  
+    引用 :> 引用内容  
+    内嵌代码 : `alert('Hello World');`  
+    画水平线 (HR) :--------  
+1. nihao    //有序列表  
+2. 你好  
+3. hao   
+
++ 年后      //无序列表
+- 年后  
+* 你好
+
+
+> aisdaiu     //缩进
+>> sjdcbsdijcbsiu
+>>> skejfbfhiedb  
+
+[百度](http://www.baidu.com)     //链接
+
+! [这是**图片](http://image.baidu.com/search/detail?ct=503316480&z=0&tn=baiduimagedetail&ipn=d&cl=2&cm=1&sc=0&lm=-1&ie=gbk&pn=5&rn=1&di=84038572530&ln=30&word=ͼƬ&os=971267529,2365112921&cs=2873303569,1224067546&objurl=http%3A%2F%2Fimg03.tooopen.com%2Fimages%2F20131111%2Fsy_46708898917.jpg&bdtype=0&simid=4255610724,655731989&pi=0&adpicid=0&timingneed=0&spn=0&is=0,0&fr=ala&ala=1&alatpl=others&pos=1)   
+
+	if(true) balabalabala else balabala  //插入代码段（用四边框圈起来）
